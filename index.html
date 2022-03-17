@@ -19,8 +19,8 @@
       --Very-dark-blue-3: hsl(215, 32%, 27%);
       --White: hsl(0, 0%, 100%);
       --lg: 18px;
-      --md: 16px;
-      --sm: 14px;
+      --md: 14px;
+      --sm: 12px;
     }
     body {
       margin: 0;
@@ -37,45 +37,109 @@
     }
     .container-card {
       display: grid;
-      grid-template-rows: 1fr auto auto auto auto;
+      grid-template-rows: auto auto auto auto;
       background-color: var(--Very-dark-blue-2);
       box-sizing: border-box;
-      width: 360px;
-      height: 400px;
-      padding: 16px;
-    }
-    .card-p-1 {
-      color: var(--White);
-      font-size: var(--lg);
-      font-weight: bold;
+      width: 280px;
+      height: 480px;
+      padding: 12px;
+      align-items: center;
+      border-radius: 16px;
+      padding: 12px;
     }
     .card-img {
       object-fit: cover;
       height: 100%;
       width: 100%;
-      grid-row: 1 / 2;
+      border-radius: 12px;
+    }
+    .card-p-1 {
+      color: var(--White);
+      font-size: var(--lg);
+      font-weight: bold;
+      margin: 16px 0 4px;
+    }
+    .card-p-1:hover {
+      color: var(--Cyan);
+    }
+    .card-p-2 {
+      color: var(--Soft-blue);
+      font-size: var(--md);
+      margin-top: 0;
+      margin-bottom: 8px;
     }
     .card-price {
       display: flex;
       flex-direction: row;
-      grid-row: 4 / 5;
       justify-content: space-between;
+      align-items: center;
+      align-self: center;
+    }
+    .card-p-3 {
+      margin: 0;
+    }
+    .card-p-3 > a {
+      text-decoration: none;
+      color: var(--Cyan);
+      font-size: var(--sm);
+    }
+    .card-p-3 > a > img {
+      height: var(--md);
+      margin-right: 4px;
+    }
+    .card-p-4 {
+      color: var(--Soft-blue);
+      font-size: var(--sm);
+      margin: 0;
+    }
+    .card-p-4 > img{
+      height: var(--md);
+      margin-right: 4px;
+      top: 0;
     }
     .card-foot {
       display: flex;
       flex-direction: row;
-      grid-row: 5 / 6;
-      justify-content: space-around;
       border-top: 1px solid var(--Soft-blue);
       align-items: center;
+      margin-top: 0;
     }
-    .card-foot img {
+    .card-foot > img {
       object-fit: cover;
       width: 28px;
       height: 28px;
+      margin-top: 12px;
+      border: 1px solid var(--White);
+      border-radius: 16px;
     }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .card-foot > p {
+      color: var(--Soft-blue);
+      font-size: var(--sm);
+      margin-top: 24px;
+      margin-left: 16px;
+    }
+    .card-foot > p > a {
+      color: var(--White);
+      font-size: var(--sm);
+      text-decoration: none;
+    }
+    .card-foot > p > a:hover {
+      color: var(--Cyan);
+    }
+    .attribution { 
+      margin-top: 12px;
+      padding-top: 12px;
+      font-size: var(--sm); 
+      text-align: center; 
+      color: var(--White);
+    }
+    .attribution a { 
+      text-decoration: none;
+      color: hsl(228, 45%, 44%);
+    }
+    .attribution a:hover {
+      color: var(--Cyan);
+    }
   </style>
 </head>
 <body>
@@ -85,20 +149,21 @@
     <p class="card-p-1">Equilibrium #3429</p>
     <p class="card-p-2">Our Equilibrium collection promotes balance and calm.</p>
     <div class="card-price">
-      <p class="card-p-3"><a href="#">0.041 ETH</a></p>
-      <p class="card-p-4">3 days left</p>
+      <p class="card-p-3"><a href="#"><img src="./images/icon-ethereum.svg" alt="ethereum"> 0.041 ETH</a></p>
+      <p class="card-p-4"><img src="./images/icon-clock.svg" alt="clock"> 3 days left</p>
     </div>
     <div class="card-foot">
       <img src="./images/image-avatar.png" alt="profile">
       <p>Creation of <a href="#">Jules Wyvern</a></p>
     </div>
   </div>
-</div>
-  
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+</div>
+  
+
 </body>
 </html>
